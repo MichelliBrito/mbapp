@@ -3,8 +3,6 @@ package br.com.mbapp.model;
 import java.util.Calendar;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -14,10 +12,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Artigo {
 	
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	
 	private String titulo;
+	
 	private String autor;
 	
 	@DateTimeFormat(pattern="yyyy/mm/dd")
@@ -26,15 +22,6 @@ public class Artigo {
 	private String texto;
 
 	
-	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getTitulo() {
 		return titulo;
 	}

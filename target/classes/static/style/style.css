@@ -40,6 +40,19 @@ body {
     height: auto;
 }
 
+.artigo div{
+	padding-top: 40px;
+	padding-right: 80px;
+	padding-left: 80px;
+	
+}
+
+.cadastro div{
+	padding-top: 40px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -85,6 +98,8 @@ body {
 }
 
 /* rodape ----------------*/
+
+
 
  
 

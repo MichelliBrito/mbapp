@@ -21,8 +21,8 @@ public class CadastroController {
 	
 	@RequestMapping(value="/cadastro", method = RequestMethod.POST)
 	public String cadastrar(Artigo artigo){
-		System.out.println(artigo.getId() + artigo.getTitulo() + artigo.getAutor() + artigo.getTexto());
+		System.out.println(artigo.getTitulo() + artigo.getAutor() + artigo.getTexto());
 		repository.save(artigo);
-		return "teste";
+		return "sucesso";
 	}
 }

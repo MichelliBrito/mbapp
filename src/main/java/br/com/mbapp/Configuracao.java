@@ -20,7 +20,7 @@ public class Configuracao {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/mbapp");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/mbappweb");
         dataSource.setUsername("root");
         dataSource.setPassword("Michelli14");
         return dataSource;

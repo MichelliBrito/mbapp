@@ -9,7 +9,7 @@
     <meta name="author" content=""></meta>
     <link rel="icon" href="images/mb.ico"></link>
 
-    <title>MB - Cadastro</title>
+    <title th:text="${artigos.titulo}"></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"></link>
@@ -51,29 +51,39 @@
     </div>
     </header>
 
-	<section class="cadastro">
-    <div class="container">
-        <h1>Cadastro de Artigos</h1>
+	<div class="artigo">
+	    <div class="container">
+	    	<div th:each="artigo : ${artigos}">
+		        <h1> <span th:text="${artigo.titulo}"></span> </h1>
+		        <h3> <span th:text="${artigo.autor}"></span> </h3>
+		         <p th:text="${artigo.texto}"></p> 
+	    	</div>
+	    </div>
+	</div>
+    
+    <!-- FOOTER -->
+      <div class="footer">
+      <footer>
+        <div class="container marketing">
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </div>
+      </footer>
+	  </div>
 
-        <form action="/cadastro" method="POST" class="form-group">
-        
-            Título: <input type="text" value="" class="form-control" id="titulo" name="titulo"/>
-            
-            <div class="row"> 
-                <div class="col-sm-9">
-                    Autor: <input type="text" value="" class="form-control" id="autor" name="autor"/>
-                </div>
-                <div class="col-sm-3">
-                    Data: <input type="text" value="" class="form-control" id="data" name="data"/>
-                </div>
-            </div>
-            
-            Texto: <textarea rows="80" cols="10" value="" class="form-control" id="texto" name="texto"></textarea>
-            
-            <button type="submit" class="btn btn-primary">Publicar</button>
-        </form>
-        
-    </div>
-    </section>
+   
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
 </body>
 </html>

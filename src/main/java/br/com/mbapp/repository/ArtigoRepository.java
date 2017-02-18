@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import br.com.mbapp.model.Artigo;
 
 
-public interface ArtigoRepository extends CrudRepository<Artigo, Long>{
+public interface ArtigoRepository extends CrudRepository<Artigo, String>{
 
 }
