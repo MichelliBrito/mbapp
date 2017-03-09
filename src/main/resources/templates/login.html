@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:form="http://www.springframework.org/tags/form">
+<html xmlns:form="http://www.springframework.org/tags/form"
+	  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -23,13 +24,13 @@
     <div class="container">
         <h1>Login de usuário</h1>
 
-        <form  action="/login" method="POST" class="form-group">
-            Login: <input type="text" value="" class="form-control" name="username"/>
+        <form th:action="${(#mvc.url('LC#login')).build()}" method="POST" class="form-group">
+            Login: <input name="username" type="text" value="" class="form-control"/>
         
-            Senha: <input type="password" value="" class="form-control" name="password"/>
+            Senha: <input name="password" type="password" value="" class="form-control"/>
      
-            <button type="submit" class="btn btn-primary" value="login" name="submit">Entrar</button>
-
+            <button type="submit" class="btn btn-primary">Entrar</button>
+			
         </form>
     </div>
 </body>

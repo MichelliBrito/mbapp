@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:form="http://www.springframework.org/tags/form">
 <head>
     <meta charset="utf-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
@@ -18,7 +20,8 @@
     <!-- Custom styles for this template -->
     <link href="style/style.css" rel="stylesheet"></link>
     
-	<script type="text/javascript" src="/ckeditor/ckeditor.js"> </script>
+	
+	
     
 </head>
 <body>
@@ -36,6 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
                 <a class="navbar-brand" href="/home">Michelli Brito</a>
             </div>
@@ -43,7 +47,8 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="/home">Artigos</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>                
+                <li><a href="#contact">Contato</a></li>  
+                <li><a href="/cadastro">Publicar Artigo</a></li>              
               </ul>
             </div>
             
@@ -71,8 +76,11 @@
                 </div>
             </div>
             
-            Texto: <textarea rows="50"  value="" class="form-control" id="txtArtigo" name="texto"></textarea>
-            <button type="submit" class="btn btn-primary">Publicar</button>
+            Texto: <textarea rows="30" cols="190" id="texto" name="texto" class="form-control"></textarea>
+            
+            
+           <button type="submit" class="btn btn-primary">Publicar</button>
+           <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         </form>
         
     </div>

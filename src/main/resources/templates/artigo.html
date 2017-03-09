@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
                 <a class="navbar-brand" href="/home">Michelli Brito</a>
             </div>
@@ -40,7 +41,8 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="/home">Artigos</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>                
+                <li><a href="#contact">Contato</a></li> 
+                <li><a href="/cadastro">Publicar Artigo</a></li>               
               </ul>
             </div>
             
@@ -52,11 +54,14 @@
     </header>
 
 	<div class="artigo">
-	    <div class="container">
+	    <div class="container" id="artigo">
 	    	<div th:each="artigo : ${artigos}">
 		        <h1> <span th:text="${artigo.titulo}"></span> </h1>
-		        <h3> <span th:text="${artigo.autor}"></span> </h3>
-		         <p th:text="${artigo.texto}"></p> 
+		        <h4> <span th:text="${artigo.autor}"></span> </h4>
+		        <h4> <span th:text="${#dates.format(artigo.data, 'yyyy-mm-dd')}"></span> </h4>
+			        <div class="paragrafo">
+			         	<pre><span th:text="${artigo.texto}"></span></pre>
+			        </div>
 	    	</div>
 	    </div>
 	</div>

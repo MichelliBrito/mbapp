@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+	  xmlns:sec="http://www.springframework.org/security/tags"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:form="http://www.springframework.org/tags/form">
   <head>
     <meta charset="utf-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
@@ -35,6 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
                 <a class="navbar-brand" href="#">Michelli Brito</a>
             </div>
@@ -42,13 +46,21 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Artigos</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>                
+                <li><a href="#contact">Contato</a></li> 
+                <li sec:authorize="isAuthenticated()"><a href="/cadastro">Publicar Artigo</a></li>                
               </ul>
+              <div>
+	              <ul class="nav navbar-nav navbar-right">
+					  <li sec:authorize="isAuthenticated()"><a href="#">admin</a></li>
+					  <li sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
+					  <li><a href="/login">Login</a></li>
+				  </ul>
+			 </div>
             </div>
             
           </div>
         </nav>
-
+		
       </div>
     </div>
     </header>
@@ -124,7 +136,6 @@
           <h2><span th:text="${artigo.titulo}"></span></h2>
           <p><a th:href="${(#mvc.url('HC#detalhes').arg(0, artigo.titulo)).build()}" class="btn btn-default" role="button">Leia mais &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        
         
       </div><!-- /.row -->
 

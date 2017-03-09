@@ -3,8 +3,33 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
+  padding-bottom: 0px;
   color: #5a5a5a;
+}
+
+pre {
+	white-space: pre-line;
+	/*line-break: keep-all;*/
+	word-break: keep-all;
+	background-color: white;
+	box-shadow:none;
+	font-family: Arial, sans-sarif;
+	font-size: 17px;
+	line-height: 1.428;
+	padding: 0px 10px 0px 5px;
+	border: none;
+	border-radius: none;
+	line-height: 2.0;
+}
+
+h1{
+	text-align:center;
+	padding-bottom:30px;
+}
+
+h4{
+	text-align:left;
+	padding-left: 95px;
 }
 
 
@@ -45,12 +70,18 @@ body {
 	padding-right: 80px;
 	padding-left: 80px;
 	
+	
 }
 
 .cadastro h1{
 	padding-top: 40px;
 	padding-right: 10px;
 	padding-left: 10px;
+}
+
+.paragrafo pre{
+	width: 700px;
+	
 }
 
 
@@ -99,7 +130,16 @@ body {
 
 /* rodape ----------------*/
 
-
+footer {
+	display: block;
+	float: bottom;
+	text-align: center;
+	position: relative;
+	top: 350px;
+	bottom: -10px;
+	box-shadow: 1px 1px 5px #808080;
+	
+}
 
  
 
