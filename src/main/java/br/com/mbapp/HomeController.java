@@ -33,4 +33,10 @@ public class HomeController {
 		modelAndView.addObject("artigos",artigos);
 		return modelAndView;
 	}
+	
+	@RequestMapping("/delete")
+	public String delete(String titulo){
+		repository.delete(titulo);
+		return "redirect:/home";
+	}
 }

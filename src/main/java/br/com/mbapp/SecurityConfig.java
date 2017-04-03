@@ -1,6 +1,7 @@
 package br.com.mbapp;
 
 
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -42,14 +43,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	    .antMatchers("/home").permitAll()
 	    .antMatchers("/{titulo}").permitAll()
 	    .anyRequest().authenticated()
-	    .and().formLogin().loginPage("/login").permitAll()
+	    .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/home", true).failureUrl("/login")
 	    .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}
 	
 	@Override
     public void configure(WebSecurity builder) throws Exception {
         builder.ignoring().antMatchers("/bootstrap/**",
-        		"/images/**", "/style/**", "/dist/**");
+        		"/images/**", "/style/**", "/dist/**", "/js/**");
     }
-	
 }

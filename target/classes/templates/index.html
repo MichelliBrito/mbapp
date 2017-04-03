@@ -22,7 +22,7 @@
     <link href="style/style.css" rel="stylesheet"></link>
   </head>
 
-  <body>
+  <body class="bodyIndex">
    
 
     <header>
@@ -40,20 +40,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-                <a class="navbar-brand" href="#">Michelli Brito</a>
+                <p class="navbar-brand">Michelli Brito</p>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Artigos</a></li>
+              <ul  class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contato</a></li> 
                 <li sec:authorize="isAuthenticated()"><a href="/cadastro">Publicar Artigo</a></li>                
               </ul>
               <div>
 	              <ul class="nav navbar-nav navbar-right">
-					  <li sec:authorize="isAuthenticated()"><a href="#">admin</a></li>
+					  <li sec:authorize="isAuthenticated()" id="admin"><a href="#">admin</a></li>
 					  <li sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
-					  <li><a href="/login">Login</a></li>
+					  <li sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
 				  </ul>
 			 </div>
             </div>
@@ -126,18 +126,20 @@
 
     <!-- tópicos para entrar em cada artigo-->
 
-    <div class="container marketing">
+    <div class="conteudo container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+     
       
-        <div class="col-lg-4" th:each="artigo : ${artigos}">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>
-          <h2><span th:text="${artigo.titulo}"></span></h2>
-          <p><a th:href="${(#mvc.url('HC#detalhes').arg(0, artigo.titulo)).build()}" class="btn btn-default" role="button">Leia mais &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        
-      </div><!-- /.row -->
+        <div class="row" th:each="artigo : ${artigos}">
+          <div class="topico">
+	          <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/> -->
+	          <h2><span th:text="${artigo.titulo}"></span></h2>
+	          <p><span th:text="${artigo.autor}"></span> <span th:text="${#dates.format(artigo.data, 'yyyy-mm-dd')}"></span></p>
+	           <p class="resumo" type="hidden"><span th:text="${artigo.texto}"></span></p>
+	          <p><a th:href="${(#mvc.url('HC#detalhes').arg(0, artigo.titulo)).build()}" class="btn btn-default" role="button">Leia mais &raquo;</a></p>
+          </div>
+        </div><!-- /.row -->
 
     </div><!-- /.container -->
     </section>
@@ -165,5 +167,7 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery-3.2.0.js"></script>
+	<script src="js/main.js"></script>
   </body>
 </html>

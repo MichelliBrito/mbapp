@@ -24,12 +24,12 @@
     <div class="container">
         <h1>Login de usuário</h1>
 
-        <form th:action="${(#mvc.url('LC#login')).build()}" method="POST" class="form-group">
+        <form th:action="@{/login}" method="post" class="form-group">
             Login: <input name="username" type="text" value="" class="form-control"/>
         
             Senha: <input name="password" type="password" value="" class="form-control"/>
      
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <button type="submit" value="Log in" class="btn btn-primary">Entrar</button>
 			
         </form>
     </div>

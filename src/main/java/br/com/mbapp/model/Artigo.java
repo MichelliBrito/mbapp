@@ -5,6 +5,7 @@ import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
@@ -12,13 +13,17 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Artigo {
 	
 	@Id
+	@NotBlank(message = "Título é obrigatório")
 	private String titulo;
 	
+	@NotBlank(message = "Autor é obrigatório")
 	private String autor;
 	
+
 	@DateTimeFormat(pattern="yyyy/mm/dd")
 	private Calendar data;
 	
+	@NotBlank(message = "Texto é obrigatório")
 	private String texto;
 
 	

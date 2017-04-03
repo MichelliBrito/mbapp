@@ -7,6 +7,10 @@ body {
   color: #5a5a5a;
 }
 
+.bodyIndex{
+	background-color: #eee;
+}
+
 pre {
 	white-space: pre-line;
 	/*line-break: keep-all;*/
@@ -30,6 +34,18 @@ h1{
 h4{
 	text-align:left;
 	padding-left: 95px;
+}
+
+
+.topico{
+	position: relative;
+    box-shadow: 1px 1px 1px 1px grey;
+    padding-top: 15px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background: white;
+    margin:10px auto 30px auto;
+    width:60%;
 }
 
 

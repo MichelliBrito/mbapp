@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+Implementation-Title: mbapp Maven Webapp
+Implementation-Version: 1.0-SNAPSHOT
 Built-By: MICHELLI
+Implementation-Vendor-Id: br.com.mbapp
 Build-Jdk: 1.8.0_73
+Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
 

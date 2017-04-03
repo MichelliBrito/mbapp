@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.springframework.org/security/tags">
 <head>
     <meta charset="utf-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
@@ -42,8 +43,15 @@
                 <li class="active"><a href="/home">Artigos</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contato</a></li> 
-                <li><a href="/cadastro">Publicar Artigo</a></li>               
+                <li sec:authorize="isAuthenticated()"><a href="/cadastro">Publicar Artigo</a></li>               
               </ul>
+              <div>
+	              <ul class="nav navbar-nav navbar-right">
+					  <li sec:authorize="isAuthenticated()"><a href="#">admin</a></li>
+					  <li sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
+					  <li sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
+				  </ul>
+			 </div>
             </div>
             
           </div>

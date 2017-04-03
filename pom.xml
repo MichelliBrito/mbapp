@@ -26,6 +26,12 @@
     </dependencies>
   </dependencyManagement>
   
+  <parent> 
+        <groupId> org.springframework.boot </groupId> 
+        <artifactId> spring-boot-starter-parent </artifactId> 
+        <version> 1.4.4.RELEASE </version> 
+  </parent>
+  
   <dependencies>
   	<!-- Web -->
     <dependency>
