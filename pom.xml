@@ -95,5 +95,30 @@
   
   <build>
     <finalName>mbapp</finalName>
+    <plugins>
+	  <plugin>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-maven-plugin</artifactId>
+	    <executions>
+	        <execution>
+	            <goals>
+	                <goal>repackage</goal>
+	            </goals>
+	            <configuration>
+	                <finalName>${artifactId}</finalName>
+	            </configuration>
+	        </execution>
+	    </executions>
+	</plugin>
+	 
+	<plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-jar-plugin</artifactId>
+	    <version>2.3.2</version>
+	    <configuration>
+	        <finalName>${artifactId}</finalName>
+	    </configuration>
+	</plugin>
+   </plugins>
   </build>
 </project>
