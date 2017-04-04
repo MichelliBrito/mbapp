@@ -49,7 +49,7 @@ public class Configuracao extends WebMvcConfigurerAdapter{
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://ec2-54-235-123-159.compute-1.amazonaws.com:5432/d4rir18f73tdnm");
+        dataSource.setUrl("jdbc:postgres://ec2-54-235-123-159.compute-1.amazonaws.com:5432/d4rir18f73tdnm");
         dataSource.setUsername("zvnvotqtguaxkw");
         dataSource.setPassword("9ee3a230201c5f01bc0edfea50f6bcb7ee727f24d499cf2522006d7aeb43bbf2");
         return dataSource;
