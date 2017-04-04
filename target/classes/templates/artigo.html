@@ -19,7 +19,7 @@
     <!-- Custom styles for this template -->
     <link href="style/style.css" rel="stylesheet"></link>
 </head>
-<body>
+<body class="bodyArtigo">
 
 	<header>
     <!-- Menu de navegação -->
@@ -70,7 +70,7 @@
 			        <div class="paragrafo">
 			         	<pre><span th:text="${artigo.texto}"></span></pre>
 			        </div>
-			        <p sec:authorize="isAuthenticated()"><a th:href="${(#mvc.url('HC#delete').arg(0, artigo.titulo)).build()}" class="btn btn-primary" role="button">Deletar Artigo</a></p>
+			        <p sec:authorize="isAuthenticated()"><a th:href="${(#mvc.url('HC#delete').arg(0, artigo.titulo)).build()}" class="btn btn-default" role="button">Deletar Artigo</a></p>
 	    	</div>
 	    </div>
 	</div>

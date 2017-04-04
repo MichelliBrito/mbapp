@@ -5,17 +5,28 @@ $("#submeter").click(function(){
 $("#admin").click(function(){
 	alert("Adminstrador do blog: Michelli Brito")
 });
- 
 
-$(function(){
-	   $(".resumo").each(function (i) {
+
+
+var campo = $(".texto");
+campo.on("input", function () {
+	   $(".texto").each(function (i) {
 	       var text = $(this).text();
-	       var len = text.split(".").length;
+	       var t = campo.val();
+	       var len = t.split(".").length;
 	       if (len > 1) {
-	           var query = text.split(".", 2);
+	           var query = t.split(".", 2);
 	           query.push('...');
 	           res = query.join(' ');
-	           $(this).text(res);
+	           $(".resumo").val(res);
+	           console.log(res);
+	       }else{
+	    	   $(".resumo").val(t);
+	    	   console.log(len);
+	    	   console.log(t);
 	       }
-	    });
-	});
+	   });
+}); 
+
+
+

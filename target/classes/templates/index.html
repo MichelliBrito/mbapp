@@ -136,7 +136,7 @@
 	          <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/> -->
 	          <h2><span th:text="${artigo.titulo}"></span></h2>
 	          <p><span th:text="${artigo.autor}"></span> <span th:text="${#dates.format(artigo.data, 'yyyy-mm-dd')}"></span></p>
-	           <p class="resumo" type="hidden"><span th:text="${artigo.texto}"></span></p>
+	          <p><span th:text="${artigo.resumo}"></span></p>
 	          <p><a th:href="${(#mvc.url('HC#detalhes').arg(0, artigo.titulo)).build()}" class="btn btn-default" role="button">Leia mais &raquo;</a></p>
           </div>
         </div><!-- /.row -->

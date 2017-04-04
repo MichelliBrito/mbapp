@@ -4,6 +4,7 @@ import java.util.Calendar;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -24,7 +25,11 @@ public class Artigo {
 	private Calendar data;
 	
 	@NotBlank(message = "Texto é obrigatório")
+	@Size(max=1000, message = "O tamanho da descrição deve estar entre 1 e 1000")
 	private String texto;
+	
+	
+	private String resumo;
 
 	
 	public String getTitulo() {
@@ -57,6 +62,14 @@ public class Artigo {
 
 	public void setTexto(String texto) {
 		this.texto = texto;
+	}
+
+	public String getResumo() {
+		return resumo;
+	}
+
+	public void setResumo(String resumo) {
+		this.resumo = resumo;
 	}
 
 	
