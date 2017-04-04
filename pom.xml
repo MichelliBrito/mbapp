@@ -91,6 +91,13 @@
 	    <artifactId>ckeditor-java-core</artifactId>
 	    <version>3.5.3</version>
 	</dependency>
+	
+	<!-- Postgree -->
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>9.4-1201-jdbc41</version>
+	</dependency>
   </dependencies>
   
   <build>
@@ -113,11 +120,24 @@
 	 
 	<plugin>
 	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-jar-plugin</artifactId>
+	    <artifactId>maven-dependency-plugin</artifactId>
 	    <version>2.3</version>
-	    <configuration>
-	        <finalName>${artifactId}</finalName>
-	    </configuration>
+	    <executions>
+	        <execution>
+	            <phase>package</phase>
+	            <goals><goal>copy</goal></goals>
+	            <configuration>
+	                <artifactItems>
+	                    <artifactItem>
+	                        <groupId>com.github.jsimone</groupId>
+	                        <artifactId>webapp-runner</artifactId>
+	                        <version>7.0.57.2</version>
+	                        <destFileName>webapp-runner.jar</destFileName>
+	                    </artifactItem>
+	                </artifactItems>
+	            </configuration>
+	        </execution>
+	    </executions>
 	</plugin>
    </plugins>
   </build>

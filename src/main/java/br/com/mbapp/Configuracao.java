@@ -5,6 +5,7 @@ import javax.sql.DataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
@@ -30,14 +31,15 @@ public class Configuracao extends WebMvcConfigurerAdapter{
         return dataSource;
     }
 	
-//	@Bean
-//	public JpaVendorAdapter jpaVendorAdapter(){//cria um bean Hibernate
-//		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-//		adapter.setDatabase(Database.MYSQL);
-//		adapter.setShowSql(false);//mostrar codigo sql no console.
-//		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente, pois já estamos usando o flyway para isso.
-//		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
-//		return adapter;
-//	}
+	@Bean
+	@Profile("dev")
+	public JpaVendorAdapter jpaVendorAdapter(){//cria um bean Hibernate
+		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+		adapter.setDatabase(Database.MYSQL);
+		adapter.setShowSql(false);//mostrar codigo sql no console.
+		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente, pois já estamos usando o flyway para isso.
+		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+		return adapter;
+	}
 	
 }
