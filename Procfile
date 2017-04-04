@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/mbapp-1.0-SNAPSHOT.war -Dspring.profiles.active=prod.
+web: java -Dserver.port=$PORT -jar target/mbapp-1.0-SNAPSHOT.war -Dspring.profiles.active=prod
