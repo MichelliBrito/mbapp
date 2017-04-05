@@ -111,7 +111,7 @@
   </dependencies>
   
   <build>
-    <finalName>${project.artifactId}</finalName>
+    <finalName>mbapp</finalName>
     <plugins>
 	  <plugin>
 	    <groupId>org.springframework.boot</groupId>
@@ -159,7 +159,7 @@
   	
   	<profile>
   		<id>prod</id>
-  		<!--
+  		
   		<activation>
   			<activeByDefault>true</activeByDefault>
   		</activation>
@@ -170,7 +170,7 @@
 			    <version>5.1.40</version>
 			    <scope>compile</scope>
   			</dependency>
-  		</dependencies> -->
+  		</dependencies> 
   	</profile>
   </profiles>
 </project>
