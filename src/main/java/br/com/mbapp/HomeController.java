@@ -18,7 +18,7 @@ public class HomeController {
 	@Autowired
 	private ArtigoRepository repository;
 	
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String index(Model model){
 		Iterable<Artigo> artigos = repository.findAll();
 		model.addAttribute("artigos", artigos);
