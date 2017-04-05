@@ -11,6 +11,8 @@
   <properties>
   	<!-- Java -->
  	<java.version>1.8</java.version>
+ 	
+ 	<commons-dbcp2.version>2.1.1</commons-dbcp2.version>
   </properties>
   
   <dependencyManagement>
@@ -75,6 +77,7 @@
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>5.1.40</version>
+	    <scope>compile</scope>
 	</dependency>
     
     <!-- JUnit -->
@@ -93,14 +96,22 @@
 	</dependency>
 	
 	<dependency>
-	    <groupId>org.postgresql</groupId>
-	    <artifactId>postgresql</artifactId>
-	    <version>9.4-1201-jdbc41</version>
+		  <groupId>org.postgresql</groupId>
+		  <artifactId>postgresql</artifactId>
+		  <version>9.4.1208</version>
 	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-dbcp2</artifactId>
+		<version>${commons-dbcp2.version}</version>
+		<scope>compile</scope>
+	</dependency>
+	
   </dependencies>
   
   <build>
-    <finalName>mbapp</finalName>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
 	  <plugin>
 	    <groupId>org.springframework.boot</groupId>
@@ -118,26 +129,48 @@
 	</plugin>
 	 
 	<plugin>
-	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-dependency-plugin</artifactId>
-	    <version>2.3</version>
-	    <executions>
-	        <execution>
-	            <phase>package</phase>
-	            <goals><goal>copy</goal></goals>
-	            <configuration>
-	                <artifactItems>
-	                    <artifactItem>
-	                        <groupId>com.github.jsimone</groupId>
-	                        <artifactId>webapp-runner</artifactId>
-	                        <version>8.0.30.2</version>
-	                        <destFileName>webapp-runner.jar</destFileName>
-	                    </artifactItem>
-	                </artifactItems>
-	            </configuration>
-	        </execution>
-	    </executions>
-	</plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.3</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>8.5.11.3</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
    </plugins>
   </build>
+  
+  <profiles>
+  	<profile>
+  		<id>local</id>
+  	</profile>
+  	
+  	<profile>
+  		<id>prod</id>
+  		<!--
+  		<activation>
+  			<activeByDefault>true</activeByDefault>
+  		</activation>
+  		<dependencies>
+  			<dependency>
+		  		<groupId>mysql</groupId>
+			    <artifactId>mysql-connector-java</artifactId>
+			    <version>5.1.40</version>
+			    <scope>compile</scope>
+  			</dependency>
+  		</dependencies> -->
+  	</profile>
+  </profiles>
 </project>
