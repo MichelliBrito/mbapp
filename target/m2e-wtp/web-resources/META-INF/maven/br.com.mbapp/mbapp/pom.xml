@@ -152,25 +152,5 @@
    </plugins>
   </build>
   
-  <profiles>
-  	<profile>
-  		<id>local</id>
-  	</profile>
-  	
-  	<profile>
-  		<id>prod</id>
-  		
-  		<activation>
-  			<activeByDefault>true</activeByDefault>
-  		</activation>
-  		<dependencies>
-  			<dependency>
-		  		<groupId>mysql</groupId>
-			    <artifactId>mysql-connector-java</artifactId>
-			    <version>5.1.40</version>
-			    <scope>compile</scope>
-  			</dependency>
-  		</dependencies> 
-  	</profile>
-  </profiles>
+  
 </project>
