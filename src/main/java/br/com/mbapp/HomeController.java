@@ -19,6 +19,11 @@ public class HomeController {
 	private ArtigoRepository repository;
 	
 	@RequestMapping("/")
+	public String index(){
+		return "teste";
+	}
+	
+	@RequestMapping("/home")
 	public String index(Model model){
 		Iterable<Artigo> artigos = repository.findAll();
 		model.addAttribute("artigos", artigos);
