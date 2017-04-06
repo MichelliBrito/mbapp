@@ -23,7 +23,7 @@ body {
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
     pre{
-        font-size: 9px;
+        font-size: 18px;
     }
 }
 
@@ -97,7 +97,7 @@ pre {
 	box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
 	padding-top: 30px;
 	padding-right: 10px;
-	padding-left: 40px;
+	padding-left: 10px;
 	margin:100px auto 30px auto;
 	background-color: white;
 	color: black;
@@ -149,7 +149,7 @@ pre {
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
     .topico p{
-        font-size: 12px;
+        font-size: 18px;
     }
 }
 
