@@ -64,13 +64,11 @@
 	<div class="artigo">
 	    <div class="container" id="artigo">
 	    	<div th:each="artigo : ${artigos}">
-		        <h1> <span th:text="${artigo.titulo}"></span> </h1>
-		        <h4> <span th:text="${artigo.autor}"></span> </h4>
-		        <h4> <span th:text="${#dates.format(artigo.data, 'yyyy-mm-dd')}"></span> </h4>
-			        <div class="paragrafo">
-			         	<pre><span th:text="${artigo.texto}"></span></pre>
-			        </div>
-			        <p sec:authorize="isAuthenticated()"><a th:href="${(#mvc.url('HC#delete').arg(0, artigo.titulo)).build()}" class="btn btn-primary" role="button">Deletar Artigo</a></p>
+		        <h1> <span th:text="${artigo.titulo}"></span></h1>
+		        <h4> <span th:text="${artigo.autor}"></span></h4>
+		        <h4> <span th:text="${#dates.format(artigo.data, 'yyyy-mm-dd')}"></span></h4>
+			    <pre><span th:text="${artigo.texto}"></span></pre>
+			    <p sec:authorize="isAuthenticated()"><a th:href="${(#mvc.url('HC#delete').arg(0, artigo.titulo)).build()}" class="btn btn-primary" role="button">Deletar Artigo</a></p>
 	    	</div>
 	    </div>
 	</div>

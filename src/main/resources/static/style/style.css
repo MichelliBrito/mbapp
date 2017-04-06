@@ -15,9 +15,9 @@ body {
 	background-color: #eee;
 }
 
-@media only screen and (min-width : 1400px) and (max-width : 1549px){
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
 	pre{
-		font-size: 20px;
+		font-size: 17px;
 	}
 }
 
@@ -25,6 +25,20 @@ body {
     pre{
         font-size: 9px;
     }
+}
+
+/** artigo **/
+
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.artigo pre{
+		width: 75%;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.artigo pre{
+		width: 100%;
+	}
 }
 
 pre {
@@ -39,22 +53,84 @@ pre {
 	border: none;
 	border-radius: none;
 	line-height: 2.0;
-	width: 75%;
 	padding-top:20px;
 	padding-right: 10px;
 }
 
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.artigo{
+		width: 75%;
+	}
+}
 
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.artigo{
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.artigo h4{
+		font-size: 15px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.artigo h4{
+		font-size: 7px;
+	}
+}
+
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.artigo h1{
+		font-size: 36px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.artigo h1{
+		font-size: 25px;
+	}
+}
+.artigo{
+	position: relative;
+	box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+	padding-top: 30px;
+	padding-right: 10px;
+	padding-left: 40px;
+	margin:100px auto 30px auto;
+	background-color: white;
+	color: black;
+}
+
+.artigo h1{
+	padding-bottom:20px;
+	font-color: black;
+}
+
+/** topico **/
 .topico{
 	position: relative;
     box-shadow: 1px 1px 1px 1px grey;
     padding-top: 15px;
+    padding-right: 5px;
     padding-left:20px;
     padding-bottom:10px;
     background: white;
     margin:10px auto 30px auto;
-    width:70%;
     color: black;
+}
+
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.topico{
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.topico{
+		width: 100%;
+	}
 }
 
 .topico p{
@@ -65,23 +141,29 @@ pre {
 	font-family: Arial, sans-sarif;
 }
 
-.artigo{
-	position: relative;
-	box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
-	padding-top: 30px;
-	padding-right: 10px;
-	padding-left: 40px;
-	margin:100px auto 30px auto;
-	width:70%;
-	background-color: white;
-	color: black;
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.topico p{
+		font-size: 16px;
+	}
 }
 
-.artigo h1{
-	padding-bottom:20px;
-	font-color: black;
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+    .topico p{
+        font-size: 12px;
+    }
 }
 
+@media only screen and (min-width : 1300px) and (max-width : 2560px){
+	.topico h2{
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+    .topico h2{
+        font-size: 22px;
+    }
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
