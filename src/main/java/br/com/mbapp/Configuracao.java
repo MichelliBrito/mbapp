@@ -35,30 +35,12 @@ public class Configuracao extends WebMvcConfigurerAdapter{
 //        dataSource.setPassword("Michelli14");
 //        return dataSource;
 //    }
-	
-//	@Bean
-//    public DataSource dataSourceProd() throws URISyntaxException{
-//        
-//        URI dbUri = new URI(System.getenv("DATABASE_URL"));
-//
-//        String username = dbUri.getUserInfo().split(":")[0];
-//        String password = dbUri.getUserInfo().split(":")[1];
-//        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-//        
-//        BasicDataSource dataSource = new BasicDataSource();
-//        dataSource.setUrl(dbUrl);
-//        dataSource.setUsername(username);
-//        dataSource.setPassword(password);
-//        dataSource.setInitialSize(20);
-//        
-//        return dataSource;
-//    }
-	
+//	
 //	@Bean
 //	public JpaVendorAdapter jpaVendorAdapter(){//cria um bean Hibernate
 //		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 //		adapter.setDatabase(Database.MYSQL);
-//		adapter.setShowSql(false);//mostrar codigo sql no console.
+//		adapter.setShowSql(true);//mostrar codigo sql no console.
 //		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente, pois já estamos usando o flyway para isso.
 //		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
 //		return adapter;

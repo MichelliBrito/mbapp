@@ -25,7 +25,6 @@ public class Artigo {
 	private Calendar data;
 	
 	@NotBlank(message = "Texto é obrigatório")
-	@Size(max=1000, message = "O tamanho da descrição deve estar entre 1 e 1000")
 	private String texto;
 	
 	

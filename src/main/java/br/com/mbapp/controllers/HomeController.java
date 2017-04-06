@@ -1,4 +1,4 @@
-package br.com.mbapp;
+package br.com.mbapp.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,11 +19,6 @@ public class HomeController {
 	private ArtigoRepository repository;
 	
 	@RequestMapping("/")
-	public String index(){
-		return "teste";
-	}
-	
-	@RequestMapping("/home")
 	public String index(Model model){
 		Iterable<Artigo> artigos = repository.findAll();
 		model.addAttribute("artigos", artigos);

@@ -40,10 +40,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	    http.authorizeRequests()
 	    .antMatchers(HttpMethod.GET, "/cadastro").hasRole("ADMIN")
 	    .antMatchers(HttpMethod.POST, "/cadastro").hasRole("ADMIN")
+	    .antMatchers("/").permitAll()
 	    .antMatchers("/home").permitAll()
 	    .antMatchers("/{titulo}").permitAll()
 	    .anyRequest().authenticated()
-	    .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/home", true).failureUrl("/login")
+	    .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/", true).failureUrl("/login")
 	    .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}
 	

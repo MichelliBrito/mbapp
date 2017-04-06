@@ -1,4 +1,4 @@
-package br.com.mbapp;
+package br.com.mbapp.controllers;
 
 
 import org.springframework.stereotype.Controller;
