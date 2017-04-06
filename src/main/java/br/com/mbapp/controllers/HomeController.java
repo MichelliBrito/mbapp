@@ -37,6 +37,6 @@ public class HomeController {
 	@RequestMapping("/delete")
 	public String delete(String titulo){
 		repository.delete(titulo);
-		return "redirect:/home";
+		return "redirect:/";
 	}
 }
