@@ -1,4 +1,4 @@
-package br.com.mbapp;
+package br.com.mbapp.controllers;
 
 import javax.validation.Valid;
 
@@ -30,6 +30,8 @@ public class CadastroController {
 			return form();
 		}
 		repository.save(artigo);
+		System.out.print(artigo.getData());
+		System.out.print(artigo.getTitulo());
 		attributes.addFlashAttribute("mensagem", "Artigo publicado com sucesso!");
 		return "redirect:/cadastro";
 	}

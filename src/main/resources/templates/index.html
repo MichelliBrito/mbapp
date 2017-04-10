@@ -85,8 +85,8 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Scrum Framework</h1>
-              <p>Scrum é um dos frameworks mais utilizados pelas grandes empresas no desenvolvimento de projetos, principalmente de softwares.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Leia mais</a></p>
+              <p>Scrum é um dos frameworks mais utilizados pelas grandes empresas no desenvolvimento de projetos, principalmente de softwares Scrum fornece agilidade para o projeto e uma série de ferramentas que otimizam o processo de construção de softwares ...</p>
+              <p><a class="btn btn-lg btn-primary" href="/Scrum%20Framework" role="button">Leia mais</a></p>
             </div>
           </div>
         </div>
@@ -94,9 +94,9 @@
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"/>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Spring Framework</h1>
-              <p>O Spring Framework é atualmente um dos frameworks java mais utilizados nas empresas. Ele consiste em diversos módulos, os quais facilitam muito a vida de um programador.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Leia mais</a></p>
+              <h1>Spring MVC e o Dispatcher Servlet</h1>
+              <p>Spring MVC é um dos módulos que compõem o Spring Framework utilizado para construir aplicações web. Além de um Framework ele conta com as boas práticas de projeto para desenvolvimento de software web utilizando a plataforma Java EE...</p>
+              <p><a class="btn btn-lg btn-primary" href="/Spring%20MVC%20e%20o%20Dispatcher%20Servlet" role="button">Leia mais</a></p>
             </div>
           </div>
         </div>
@@ -104,9 +104,9 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"/>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Spring MVC</h1>
-              <p>Spring MVC é um dos módulos que compõem o Spring Framework utilizado para construir aplicações web. Além de um Framework ele conta com as boas práticas de projeto para desenvolvimento de software web utilizando a plataforma Java EE.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Leia mais</a></p>
+              <h1>Spring Framework</h1>
+              <p>O Spring Framework é atualmente um dos frameworks java mais utilizados nas empresas. Ele consiste em diversos módulos, os quais facilitam muito a vida de um programador... </p>
+              <p><a class="btn btn-lg btn-primary" href="/Spring%20Framework" role="button">Leia mais</a></p>
             </div>
           </div>
         </div>
@@ -134,8 +134,8 @@
         <div class="row" th:each="artigo : ${artigos}">
           <div class="topico">
 	          <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/> -->
-	          <h2><span th:text="${artigo.titulo}"></span></h2>
-	          <p><span th:text="${artigo.autor}"></span> <span th:text="${#dates.format(artigo.data, 'yyyy-mm-dd')}"></span></p>
+	          <h3><span th:text="${artigo.titulo}"></span></h3>
+	          <h4><span th:text="${artigo.autor}"></span> <span th:text="${artigo.data}"></span></h4>
 	          <p><span th:text="${artigo.resumo}"></span></p>
 	          <p><a th:href="${(#mvc.url('HC#detalhes').arg(0, artigo.titulo)).build()}" class="btn btn-default" role="button">Leia mais &raquo;</a></p>
           </div>
@@ -150,7 +150,7 @@
       <footer>
         <div class="container marketing">
           <p class="pull-right"><a href="#">Back to top</a></p>
-          <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </div>
       </footer>
 	  </div>

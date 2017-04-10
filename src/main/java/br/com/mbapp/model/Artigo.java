@@ -21,8 +21,8 @@ public class Artigo {
 	private String autor;
 	
 
-	@DateTimeFormat(pattern="yyyy/mm/dd")
-	private Calendar data;
+	@DateTimeFormat(pattern="dd-mm-yyyy")
+	private String data;
 	
 	@NotBlank(message = "Texto é obrigatório")
 	private String texto;
@@ -47,11 +47,11 @@ public class Artigo {
 		this.autor = autor;
 	}
 
-	public Calendar getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(Calendar data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 

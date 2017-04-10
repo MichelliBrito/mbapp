@@ -41,7 +41,7 @@ public class Configuracao extends WebMvcConfigurerAdapter{
 //		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 //		adapter.setDatabase(Database.MYSQL);
 //		adapter.setShowSql(true);//mostrar codigo sql no console.
-//		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente, pois já estamos usando o flyway para isso.
+//		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente.
 //		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
 //		return adapter;
 //	}

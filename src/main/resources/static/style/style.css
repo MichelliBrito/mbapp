@@ -17,13 +17,13 @@ body {
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
 	pre{
-		font-size: 17px;
+		font-size: 19px;
 	}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
     pre{
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -31,7 +31,7 @@ body {
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
 	.artigo pre{
-		width: 75%;
+		width: 100%;
 	}
 }
 
@@ -49,17 +49,29 @@ pre {
 	box-shadow:none;
 	font-family: Arial, sans-sarif;
 	line-height: 1.428;
-	padding: 0px 10px 0px 5px;
+	padding: 20px 0px 0px 0px;
 	border: none;
 	border-radius: none;
 	line-height: 2.0;
-	padding-top:20px;
-	padding-right: 10px;
 }
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
 	.artigo{
 		width: 75%;
+		padding-top: 30px;
+		padding-right: 5px;
+		padding-left: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+	.artigo{
+		width: 100%;
+		padding-top: 30px;
+		padding-right: 2px;
+		padding-left: 2px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -71,39 +83,40 @@ pre {
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
 	.artigo h4{
-		font-size: 15px;
+		font-size: 14px;
 	}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px){
 	.artigo h4{
-		font-size: 7px;
+		font-size: 12px;
 	}
 }
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
-	.artigo h1{
-		font-size: 36px;
+	.artigo h2{
+		font-size: 38px;
 	}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px){
-	.artigo h1{
-		font-size: 25px;
+	.artigo h2{
+		font-size: 28px;
 	}
 }
 .artigo{
 	position: relative;
 	box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
 	padding-top: 30px;
-	padding-right: 10px;
-	padding-left: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
 	margin:100px auto 30px auto;
 	background-color: white;
 	color: black;
 }
 
-.artigo h1{
+.artigo h2{
 	padding-bottom:20px;
 	font-color: black;
 }
@@ -143,28 +156,39 @@ pre {
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
 	.topico p{
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
     .topico p{
-        font-size: 18px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (min-width : 768px) and (max-width : 2560px){
-	.topico h2{
+	.topico h3{
 		font-size: 30px;
 	}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
-    .topico h2{
-        font-size: 22px;
+    .topico h3{
+        font-size: 24px;
     }
 }
 
+@media only screen and (min-width : 768px) and (max-width : 2560px){
+	.topico h4{
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .topico h4{
+        font-size: 10px;
+    }
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -263,10 +287,11 @@ footer {
 	text-align: center;
 	position: relative;
 	bottom: -10px;
-	top: 200px;
+	top: 30px;
 	box-shadow: 1px 1px 5px #808080;
 	
 }
+
 
  
 
