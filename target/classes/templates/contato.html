@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"
-	  xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="http://www.springframework.org/security/tags"
-	  xmlns:form="http://www.springframework.org/tags/form">
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.springframework.org/security/tags">
 <head>
     <meta charset="utf-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
@@ -12,20 +10,16 @@
     <meta name="author" content=""></meta>
     <link rel="icon" href="images/mb.ico"></link>
 
-    <title>MB - Cadastro</title>
+    <title>Contato</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"></link>
     <link href="bootstrap/js/bootstrap.min.js" rel="stylesheet"></link>
 
     <!-- Custom styles for this template -->
-    <link href="style/styleCss.css" rel="stylesheet"></link>
-    
-	
-	
-    
+    <link href="style/styleStaticsContato.css" rel="stylesheet"></link>
 </head>
-<body>
+<body class="bodyStaticContato">
 
 	<header>
     <!-- Menu de navegação -->
@@ -42,18 +36,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-                <p class="navbar-brand">Michelli Brito</p>
+                <p class="navbar-brand" >Michelli Brito</p>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul  class="nav navbar-nav">
+              <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/sobre">Sobre</a></li>
                 <li><a href="/contato">Contato</a></li> 
-                <li sec:authorize="isAuthenticated()"><a href="/cadastro">Publicar Artigo</a></li>                
+                <li sec:authorize="isAuthenticated()"><a href="/cadastro">Publicar Artigo</a></li>               
               </ul>
               <div>
 	              <ul class="nav navbar-nav navbar-right">
-					  <li sec:authorize="isAuthenticated()" id="admin"><a href="#">admin</a></li>
+					  <li sec:authorize="isAuthenticated()"><a href="#">admin</a></li>
 					  <li sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
 					  <li sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
 				  </ul>
@@ -62,46 +56,26 @@
             
           </div>
         </nav>
-		
+
       </div>
     </div>
     </header>
 
-	<section class="cadastro">
-    <div class="container">
-        <h1>Publicar Artigo</h1>
-        <th:block th:include="fragments/MensagemSucesso"></th:block>
-
-
-        <form action="/cadastro" method="POST" class="form-group">
-        
-        
-        
-            Título: <input type="text" value="" class="form-control" id="titulo" name="titulo"/>
-            
-            <div class="row"> 
-                <div class="col-sm-9">
-                    Autor: <input type="text" value="" class="form-control" id="autor" name="autor"/>
-                </div>
-                <div class="col-sm-3">
-                    Data: <input type="date" value="dd-mm-yyyy" class="form-control" name="data"/>
-                </div>
-            </div>
-            
-            Texto: <textarea rows="15" cols="190" name="texto" class="texto form-control"></textarea>
-            
-           <input type="hidden" value="" class="resumo form-control" id="resumo" name="resumo"/> 
-            
-            
-           <button id="submeter" type="submit" class="btn btn-primary">Publicar</button>
-           <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-        </form>
-        
-    </div>
-    </section>
+	<div class="container">
+		<div class="staticContato">
+			<h1>Contatos</h1>
+			<ul>
+				<li><p>Linkedin: <a href="https://www.linkedin.com/in/michelli-brito-28b13577/" target="_blank">https://www.linkedin.com/in/michellibrito</a></p></li>
+				<li><p>Github: <a href="https://github.com/MichelliBrito" target="_blank">https://github.com/MichelliBrito</a></p></li>
+				<li><p>Medium: <a href="https://medium.com/@michellibrito" target="_blank">https://medium.com/@michellibrito</a></p></li>
+				<li><p>Email: michellidibrito@gmail.com</p></li>
+			</ul>
+		</div>
+	    
+	</div>
     
     <!-- FOOTER -->
-      <div class="footer">
+      <div class="footerStaticContato">
       <footer>
         <div class="container marketing">
           <p class="pull-right"><a href="#">Back to top</a></p>
@@ -110,7 +84,10 @@
       </footer>
 	  </div>
 
-	<!-- Bootstrap core JavaScript
+   
+
+
+    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -120,8 +97,8 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/jquery-3.2.0.js"></script>
+    <script src="js/jquery-3.2.0.js"></script>
 	<script src="js/main.js"></script>
-	
+    
 </body>
 </html>

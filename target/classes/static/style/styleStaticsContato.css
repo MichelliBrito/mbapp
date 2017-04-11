@@ -1,0 +1,83 @@
+.bodyStaticContato{
+	background-color: #eee;
+}
+
+.staticContato{
+	position: relative;
+	box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+	padding-top: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	margin:100px auto 30px auto;
+	background-color: white;
+	color: black;
+}
+
+@media only screen and (min-width : 768px) and (max-width : 2560px){
+	.staticContato{
+		width: 65%;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+	.staticContato{
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 2560px){
+	.staticContato h1{
+		font-size: 38px;
+		padding-bottom: 20px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+	.staticContato h1{
+		font-size: 28px;
+		padding-bottom: 20px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+	.staticContato ul{
+		padding-left: 5px;
+	}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 2560px){
+	.staticContato p{
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .staticContato p{
+        font-size: 15px;
+    }
+}
+
+.footerStaticContato {
+	display: block;
+	float: bottom;
+	text-align: center;
+	position: relative;
+	bottom: -10px;
+	box-shadow: 1px 1px 5px #808080;
+	
+}
+
+
+
+@media only screen and (min-width : 768px) and (max-width : 2560px){
+	.footerStaticContato{
+		top: 170px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .footerStaticContato{
+     	top: 157px;
+    }
+}
