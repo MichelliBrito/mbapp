@@ -26,24 +26,24 @@ public class Configuracao extends WebMvcConfigurerAdapter{
         SpringApplication.run(Configuracao.class, args);
     }
 	
-	@Bean
-    public DataSource dataSource(){
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/mbappweb");
-        dataSource.setUsername("root");
-        dataSource.setPassword("Michelli14");
-        return dataSource;
-    }
-	
-	@Bean
-	public JpaVendorAdapter jpaVendorAdapter(){//cria um bean Hibernate
-		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-		adapter.setDatabase(Database.MYSQL);
-		adapter.setShowSql(true);//mostrar codigo sql no console.
-		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente.
-		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
-		return adapter;
-	}
+//	@Bean
+//    public DataSource dataSource(){
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+//        dataSource.setUrl("jdbc:mysql://localhost:3306/mbappweb");
+//        dataSource.setUsername("root");
+//        dataSource.setPassword("Michelli14");
+//        return dataSource;
+//    }
+//	
+//	@Bean
+//	public JpaVendorAdapter jpaVendorAdapter(){//cria um bean Hibernate
+//		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+//		adapter.setDatabase(Database.MYSQL);
+//		adapter.setShowSql(true);//mostrar codigo sql no console.
+//		adapter.setGenerateDdl(true);//habilita para que o hibernate crie as tabelas automaticamente.
+//		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+//		return adapter;
+//	}
 	
 }
